@@ -62,10 +62,21 @@ npm run dev
 
 ## 📸 Project Structure
 
-- `src/components`: Reusable UI components (Modals, Navigation, Footer, etc.)
-- `src/pages`: Main application views (Dashboard, Bookings, Auth, etc.)
-- `src/context`: Auth state management using React Context API.
-- `src/firebase`: Configuration and initialization of Firebase services.
+```text
+hotel-app/
+├── src/
+│   ├── assets/         # Images, icons, and static assets
+│   ├── components/     # Reusable UI components (Modals, Nav, etc.)
+│   ├── context/        # React Context API global state (Auth)
+│   ├── firebase/       # Firebase service initialization & config
+│   ├── pages/          # Main application views/routes
+│   ├── App.jsx         # Main App routing and layout logic
+│   └── main.jsx        # Application entry point
+├── .env                # Local environment variables (Git Ignored)
+├── .npmrc              # Production build configuration for Vercel
+├── package.json        # Project metadata and dependencies
+└── vite.config.js      # Vite build and server configuration
+```
 
 ---
 
