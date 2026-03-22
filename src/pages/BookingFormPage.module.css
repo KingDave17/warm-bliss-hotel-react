@@ -1,0 +1,143 @@
+.page {
+  padding-top: 68px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fieldset {
+  border: 1.5px solid #e0d4c8;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.fieldset legend {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c9915d;
+  padding: 0 0.5rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.fieldGroup:last-child {
+  margin-bottom: 0;
+}
+
+.fieldGroup label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+.fieldGroup input,
+.fieldGroup textarea,
+.fieldGroup select {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 7px;
+  font-size: 0.97rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fafafa;
+}
+
+.fieldGroup input:focus,
+.fieldGroup textarea:focus,
+.fieldGroup select:focus {
+  outline: none;
+  border-color: #d4a574;
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+  background: white;
+}
+
+.fieldGroup textarea {
+  resize: vertical;
+}
+
+.fieldGroup input.invalid,
+.fieldGroup textarea.invalid {
+  border-color: #e74c3c;
+}
+
+.errorText {
+  color: #e74c3c;
+  font-size: 0.82rem;
+  margin: 0.25rem 0 0;
+}
+
+.dateRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.submitBtn {
+  padding: 0.95rem;
+  font-size: 1.05rem;
+  font-family: inherit;
+  font-weight: 700;
+  background: linear-gradient(135deg, #d4a574, #c9915d);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .dateRow {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldset {
+    padding: 1.2rem 1rem;
+  }
+}

@@ -1,0 +1,148 @@
+.page {
+  padding-top: 68px;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  align-items: start;
+}
+
+/* ── Order Summary ── */
+.summary h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.summaryCard {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  font-size: 0.97rem;
+  color: #444;
+}
+
+.summaryRow strong {
+  color: #1a1a1a;
+}
+
+.amount {
+  font-size: 1.2rem;
+  color: #c9915d !important;
+}
+
+.summaryDivider {
+  border-top: 1px dashed #e0d4c8;
+  margin: 0.7rem 0;
+}
+
+.secureNote {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.backBtn {
+  margin-top: 1rem;
+  background: none;
+  border: 1.5px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  color: #555;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.backBtn:hover {
+  border-color: #0eaa5a; /* Paystack Green hint */
+  color: #0eaa5a;
+}
+
+/* ── Action Section ── */
+.formSection h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+}
+
+.payActionCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.actionNote {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.payBtn {
+  padding: 1.1rem 2rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 700;
+  background: #0eaa5a; /* Paystack Green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
+  width: 100%;
+}
+
+.payBtn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.payBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem 3rem;
+    gap: 2rem;
+  }
+
+  .summary {
+    order: 2;
+  }
+
+  .formSection {
+    order: 1;
+  }
+}

@@ -1,0 +1,132 @@
+.nav {
+  width: 100%;
+  background-color: #150707;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: fixed;
+  top: -2px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 70px;
+  padding-top: 2px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.logoWrap a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  mix-blend-mode: lighten;
+  clip-path: circle(48%);
+  filter: contrast(1.1);
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a,
+.navLinks button {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover,
+.navLinks button:hover {
+  color: #d4a574;
+}
+
+.signinLink {
+  background: linear-gradient(135deg, #d4a574, #c9915d) !important;
+  color: white !important;
+  padding: 0.45rem 1.2rem !important;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: opacity 0.2s !important;
+}
+
+.signinLink:hover {
+  opacity: 0.85;
+  color: white !important;
+}
+
+.signOutBtn {
+  background: rgba(212, 165, 116, 0.15) !important;
+  border: 1px solid #d4a574 !important;
+  color: #d4a574 !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s !important;
+}
+
+.signOutBtn:hover {
+  background: rgba(212, 165, 116, 0.3) !important;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #150707;
+    padding: 0.5rem 0 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .navLinks a,
+  .navLinks button {
+    font-size: 1.05rem;
+  }
+}

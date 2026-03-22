@@ -1,0 +1,178 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 68px auto 0;
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #150707;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 4rem 0;
+  color: #666;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(212, 165, 116, 0.3);
+  border-top-color: #d4a574;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  background: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.emptyState h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.bookBtn {
+  background: linear-gradient(135deg, #d4a574, #c9915d);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.bookBtn:hover {
+  opacity: 0.85;
+}
+
+/* Bookings List */
+.bookingsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.bookingCard {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bookingCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0e6dc;
+}
+
+.cardHeader h3 {
+  font-family: inherit;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.statusBadge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+.statusBadge.succeeded {
+  background-color: #e8f5e9;
+  color: #0eaa5a;
+}
+
+.statusBadge.pending {
+  background-color: #fff3e0;
+  color: #f5a623;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.label {
+  color: #666;
+}
+
+.value {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.valueRef {
+  color: #555;
+  font-family: monospace;
+  background: #f4f4f4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .bookingsList {
+    grid-template-columns: 1fr;
+  }
+}

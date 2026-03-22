@@ -1,0 +1,231 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 68px auto 0;
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #150707;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.profileCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.avatarSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #d4a574, #c9915d);
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-transform: uppercase;
+}
+
+.userInfo h2 {
+  font-family: inherit;
+  font-size: 1.6rem;
+  margin: 0 0 0.3rem;
+  color: #1a1a1a;
+}
+
+.userEmail {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.divider {
+  border-top: 1px solid #f0e6dc;
+  margin: 2rem 0;
+}
+
+.message {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.message.success {
+  background: #e8f5e9;
+  color: #0eaa5a;
+}
+
+.message.error {
+  background: #ffebee;
+  color: #e74c3c;
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+.formGroup input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #d4a574;
+}
+
+.disabledInput {
+  background: #f9f9f9;
+  color: #888;
+  cursor: not-allowed;
+  border-color: #e0e0e0 !important;
+}
+
+.formGroup small {
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: -0.2rem;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, #d4a574, #c9915d);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  flex: 2;
+}
+
+.saveBtn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.saveBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.cancelBtn {
+  background: white;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex: 1;
+}
+
+.cancelBtn:hover {
+  background: #f4f4f4;
+}
+
+.viewMode {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.readOnlyText {
+  font-size: 1.05rem;
+  color: #333;
+  background: #faf8f5;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin: 0;
+  border: 1px solid transparent;
+}
+
+.editBtn {
+  align-self: flex-start;
+  background: #150707;
+  color: white;
+  padding: 0.75rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.editBtn:hover {
+  background: #3a1919;
+}
+
+@media (max-width: 768px) {
+  .profileCard {
+    padding: 2rem 1.5rem;
+  }
+}

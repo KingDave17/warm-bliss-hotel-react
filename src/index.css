@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --brand-dark: #150707;
+  --brand-gold: #d4a574;
+  --brand-gold-deep: #c9915d;
+  --brand-cream: #f7eeee;
+  --brand-peach: #e99678;
+  --text-primary: #1a1a1a;
+  --text-muted: #777;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--brand-cream);
+  background-image: linear-gradient(to bottom, var(--brand-dark) 0px, var(--brand-dark) 68px, transparent 68px);
+  background-repeat: no-repeat;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-sans);
+}
+
+a {
+  font-family: var(--font-sans);
+}

@@ -1,0 +1,347 @@
+.page {
+  padding-top: 68px;
+  background-color: #f7eeee;
+  min-height: 100vh;
+}
+
+/* ── Hero ── */
+.hero {
+  text-align: center;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.hotelName {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.4rem;
+}
+
+.tagline {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: #555;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ── Gallery ── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 6px;
+  padding: 1.5rem;
+}
+
+.galleryItem {
+  overflow: hidden;
+  border-radius: 6px;
+  height: 100%;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.04);
+}
+
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.large img {
+  height: 100%;
+}
+
+/* ── About ── */
+.about {
+  margin: 4rem 2rem;
+  background: peachpuff;
+  padding: 2.5rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.about h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.ctaBtn {
+  margin-top: 1.5rem;
+  padding: 0.7rem 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+  background: #555;
+}
+
+/* ── Review Section ── */
+.reviewSection {
+  margin: 4rem 2rem;
+}
+
+.reviewSection h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.reviewForm label {
+  font-weight: 500;
+  color: #333;
+}
+
+.reviewForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.reviewForm textarea:focus {
+  outline: none;
+  border-color: #d4a574;
+}
+
+.reviewForm textarea.invalid {
+  border-color: #e74c3c;
+}
+
+.errorText {
+  color: #e74c3c;
+  font-size: 0.88rem;
+  margin: -4px 0 4px;
+}
+
+.starSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.15s;
+  user-select: none;
+}
+
+.star:hover {
+  transform: scale(1.15);
+}
+
+.submitBtn {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #555;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Contact Section ── */
+.contactSection {
+  margin: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactInfoBox {
+  flex: 1;
+  background: #150707;
+  color: white;
+  padding: 3rem;
+}
+
+.contactInfoBox h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d4a574;
+}
+
+.contactInfoBox p {
+  color: #e0d4c8;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contactDetails p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: white;
+}
+
+.contactForm {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+  background: #faf8f5;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #d4a574;
+}
+
+.contactBtn {
+  padding: 1rem;
+  background: linear-gradient(135deg, #d4a574, #c9915d);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.contactBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+
+  .large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .large img {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .galleryItem img {
+    height: 160px;
+  }
+
+  .about {
+    margin: 2.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .reviewSection {
+    margin: 2.5rem 1rem;
+  }
+
+  .contactSection {
+    margin: 2.5rem 1rem;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactInfoBox {
+    padding: 2rem;
+  }
+
+  .contactForm {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .large {
+    grid-column: span 1;
+  }
+
+  .galleryItem img,
+  .large img {
+    height: 220px;
+    min-height: unset;
+  }
+}
