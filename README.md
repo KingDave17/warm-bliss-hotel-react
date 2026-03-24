@@ -2,7 +2,7 @@
 
 A modern, full-stack hotel management and booking application built with **React**, **Firebase**, and **Paystack**. This platform offers a seamless experience for users to explore luxury accommodations, manage bookings, and process secure payments.
 
-🚀 **Live Demo:** [View on Vercel](https://warm-bliss-hotel-react-8w96-c63x1xdhh-kingdave17s-projects.vercel.app/)
+🚀 **Live Demo:** [View on Vercel](https://warm-bliss-hotel-react-8w96.vercel.app)
 
 ---
 
